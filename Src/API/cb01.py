@@ -278,6 +278,8 @@ async def series_redirect_url(link,season,episode,client,MFP):
 
 async def cb01(id,client,MFP):
     try:
+        print(f'Proxies: {proxies}')
+        print(f'Proxies2: {proxies2}')
         general = await is_movie(id)
         ismovie = general[0]
         real_id = general[1]
