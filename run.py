@@ -64,6 +64,7 @@ if MYSTERIUS == "1":
     from Src.API.cool import cool
 DDL_DOMAIN = config.DDL_DOMAIN
 app = FastAPI()
+main_app = app
 app.include_router(m3u8_clone)
 limiter = Limiter(key_func=get_remote_address)
 app.state.limiter = limiter
